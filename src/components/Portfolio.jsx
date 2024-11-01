@@ -1,5 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronUp, Mail, GithubIcon, Linkedin, ExternalLink, Menu, X } from 'lucide-react';
+import {  } from 'lucide-react';
+import { 
+   
+  Twitter, ChevronUp, Mail, GithubIcon, Linkedin, ExternalLink, Menu, X,
+  UserCircle, 
+  FolderGit2, 
+  MessageCircle,
+  Shield,
+  FileText,
+  FileDown,
+  Eye,
+  Code2,
+  MapPin,
+  Phone
+} from 'lucide-react';
+import ResumeDownload from './ResumeDownload';
 
 const Portfolio = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -270,6 +285,7 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
+      <ResumeDownload/>
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-8">
