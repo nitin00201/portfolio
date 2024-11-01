@@ -271,7 +271,7 @@ const Portfolio = () => {
                 <span>LinkedIn</span>
               </a>
             </div>
-            <form className="space-y-6">
+            {/* <form className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <input type="text" placeholder="Name" className="w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-blue-600" />
                 <input type="email" placeholder="Email" className="w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-blue-600" />
@@ -281,7 +281,7 @@ const Portfolio = () => {
               <button type="submit" className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors">
                 Send Message
               </button>
-            </form>
+            </form> */}
           </div>
         </div>
       </section>
