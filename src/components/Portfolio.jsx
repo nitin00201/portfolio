@@ -14,6 +14,30 @@ const Portfolio = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const timelineData = [
+    
+    {
+      year: '2022',
+      school: 'Utkal University',
+      course: 'Bachelor of Science',
+    },
+    {
+      year: '2024',
+      school: 'VSSUT, Burla',
+      course: 'Master of Computer Application',
+    },
+  ];
+  const experienceData = [
+    {
+      year: "may'2024 - Present",
+      jobTitle: 'Software Developer Apparentice',
+      company: 'Hyscaler',
+      description: 'working as a full stack developer',
+    },
+        
+  ];
+  
+
   const projects = [
     {
       title: "Zscrum - Project Management",
@@ -39,7 +63,7 @@ const Portfolio = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className=" bg-gray-50">
       {/* Navigation */}
       <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}>
         <div className="container mx-auto px-4">
@@ -75,7 +99,7 @@ const Portfolio = () => {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="pt-20 min-h-screen flex items-center">
+      <section id="home" className="pt-20  flex items-center">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="md:w-1/2 text-center md:text-left">
@@ -95,7 +119,7 @@ const Portfolio = () => {
               </div>
             </div>
             <div className="md:w-1/2 mt-8 md:mt-0">
-              <img src="/api/placeholder/500/500" alt="Hero" className="rounded-full mx-auto" />
+              <img src="https://t4.ftcdn.net/jpg/02/64/20/25/240_F_264202539_j2iL5jDhKbA1fRLg2FRviTiHYXXkfVLF.jpg" alt="Hero" className="rounded-full mx-auto" width={500} />
             </div>
           </div>
         </div>
@@ -103,11 +127,12 @@ const Portfolio = () => {
 
       {/* About Section */}
       <section id="about" className="py-20 bg-white">
+
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">About Me</h2>
-          <div className="flex flex-col md:flex-row items-center gap-8">
+          <h2 className="text-4xl font-bold text-center mb-12">About Me</h2>
+          <div className="flex flex-col md:flex-row items-center justify-start gap-4">
             <div className="md:w-1/2">
-              <img src="/api/placeholder/400/400" alt="About" className="rounded-lg shadow-lg" />
+              <img src="https://t4.ftcdn.net/jpg/00/94/88/19/240_F_94881945_nhV1LG78QOf0FR6SEbmEuiuzvQQi3c7h.jpg" alt="About" className="rounded-lg shadow-lg" wi />
             </div>
             <div className="md:w-1/2">
               <h3 className="text-2xl font-semibold mb-4">Full Stack Developer</h3>
@@ -128,7 +153,7 @@ const Portfolio = () => {
                   <h4 className="font-semibold mb-2">Backend</h4>
                   <ul className="text-gray-600">
                     <li>Spring Boot</li>
-                    <li>Node.js</li>
+                    <li>Docker</li>
                     <li>PostgreSQL</li>
                   </ul>
                 </div>
@@ -138,6 +163,51 @@ const Portfolio = () => {
         </div>
       </section>
 
+      <div className="flex flex-col items-center py-10 bg-white ">
+      <h2 className="text-2xl md:text-3xl font-bold mb-10 text-black">Experience Timeline</h2>
+      <div className="w-full max-w-md lg:max-w-3xl space-y-8 px-4">
+        {experienceData.map((item, index) => (
+          <div
+            key={index}
+            className={`flex flex-col md:flex-row items-center md:items-start p-6 rounded-lg bg-gray-100 shadow-lg transition-transform transform ${
+              index % 2 === 0 ? 'md:translate-x-4' : 'md:-translate-x-4'
+            } hover:scale-105 hover:shadow-2xl animate-slideIn`}
+          >
+            <div className="text-blue-500 font-semibold text-xl md:text-2xl mb-2 md:mb-0 md:mr-6">
+              {item.year}
+            </div>
+            <div className="text-center md:text-left">
+              <h3 className="text-lg md:text-xl font-semibold">{item.jobTitle}</h3>
+              <p className="text-gray-700 font-medium">{item.company}</p>
+              <p className="text-gray-600 mt-2">{item.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>    
+
+      <div className="flex flex-col items-center py-10 bg-white ">
+      <h2 className="text-2xl md:text-3xl font-bold mb-10 text-black">Education Timeline</h2>
+      <div className="w-full max-w-md lg:max-w-3xl space-y-8 px-4">
+        {timelineData.map((item, index) => (
+          <div
+            key={index}
+            className={`flex flex-col md:flex-row items-center md:items-start p-4 rounded-lg bg-gray-100 shadow-lg transition-transform transform ${
+              index % 2 === 0 ? 'md:translate-x-4' : 'md:-translate-x-4'
+            } hover:scale-105 hover:shadow-2xl animate-slideIn`}
+          >
+            <div className="text-blue-500 font-semibold text-xl md:text-2xl mb-2 md:mb-0 md:mr-6">
+              {item.year}
+            </div>
+            <div className="text-center md:text-left">
+              <h3 className="text-lg md:text-xl font-semibold">{item.school}</h3>
+              <p className="text-gray-600">{item.course}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
       {/* Projects Section */}
       <section id="projects" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -145,7 +215,7 @@ const Portfolio = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                <img src={`/api/placeholder/400/250`} alt={project.title} className="w-full" />
+                {/* <img src={`/api/placeholder/400/250`} alt={project.title} className="w-full" /> */}
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
                   <p className="text-gray-600 mb-4">{project.description}</p>
@@ -206,7 +276,7 @@ const Portfolio = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-center md:text-left mb-4 md:mb-0">
-              <h3 className="text-xl font-bold">Nitin</h3>
+              <h3 className="text-xl font-bold">Nitin Kabi</h3>
               <p className="text-gray-400">Full Stack Developer</p>
             </div>
             <div className="flex space-x-6">
