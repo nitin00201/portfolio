@@ -32,9 +32,9 @@ const Portfolio = () => {
     {
       title: "Portfolio Website",
       description: "Personal portfolio website built with React and Tailwind CSS",
-      tech: ["React", "Tailwind CSS", "Framer Motion"],
-      github: "https://github.com/yourusername/portfolio",
-      demo: "https://portfolio-demo.com"
+      tech: ["React", "Tailwind CSS",],
+      github: "https://github.com/nitin00201/portfolio",
+      demo: "https://portfolio-sage-one-22.vercel.app/"
     }
   ];
 
