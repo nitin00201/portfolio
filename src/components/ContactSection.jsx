@@ -20,15 +20,15 @@ const ContactSection = () => {
     {
       icon: <GithubIcon className="w-6 h-6" />,
       label: 'Github',
-      value: 'nitinkabi',
-      href: 'https://github.com/nitinkabi',
+      value: 'nitin00201',
+      href: 'https://github.com/nitin00201',
       gradient: 'from-purple-500/20 via-purple-600/10 to-purple-700/20'
     },
     {
       icon: <Globe className="w-6 h-6" />,
       label: 'Portfolio',
-      value: 'nitin.dev',
-      href: 'https://nitin.dev',
+      value: 'nitin.kabi',
+      href: 'https://portfolio-sage-one-22.vercel.app/',
       gradient: 'from-emerald-500/20 via-emerald-600/10 to-emerald-700/20'
     }
   ];
@@ -101,7 +101,7 @@ const ContactSection = () => {
           <div className="relative group">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 
               rounded-full blur opacity-0 group-hover:opacity-50 transition-opacity duration-500" />
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
+            <a href="/" target="_blank" rel="noopener noreferrer"
               className="relative flex items-center justify-center w-12 h-12 bg-gray-800 
               rounded-full hover:bg-gray-700 transition-colors">
               <Twitter className="w-5 h-5 text-gray-300" />

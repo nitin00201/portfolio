@@ -15,9 +15,9 @@ import {
 
 const HeroSection = () => {
   const socialLinks = [
-    { icon: <Github className="w-5 h-5" />, href: "#", label: "GitHub" },
-    { icon: <Linkedin className="w-5 h-5" />, href: "#", label: "LinkedIn" },
-    { icon: <Mail className="w-5 h-5" />, href: "#", label: "Email" }
+    { icon: <Github className="w-5 h-5" />, href: "https://github.com/nitin00201", label: "GitHub" },
+    { icon: <Linkedin className="w-5 h-5" />, href: "https://www.linkedin.com/in/nitin-kabi-980532247/", label: "LinkedIn" },
+    { icon: <Mail className="w-5 h-5" />, href: "kabinitin2002@gmail.com", label: "Email" }
   ];
 
   return (
