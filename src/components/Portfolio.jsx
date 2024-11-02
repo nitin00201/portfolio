@@ -15,6 +15,12 @@ import {
   Phone
 } from 'lucide-react';
 import ResumeDownload from './ResumeDownload';
+import TimelineComponent from './TimelineComponent';
+import AboutMe from './AboutMe';
+import HeroSection from './HeroSection';
+import Navbar from './Navbar';
+import ContactSection from './ContactSection';
+import Footer from './Footer';
 
 const Portfolio = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -80,41 +86,11 @@ const Portfolio = () => {
   return (
     <div className=" bg-gray-50">
       {/* Navigation */}
-      <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}>
-        <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center">
-            <a href="#home" className="text-2xl font-bold text-blue-600">Nitin</a>
-            
-            {/* Mobile Menu Button */}
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden">
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-            
-            {/* Desktop Menu */}
-            <div className="hidden md:flex space-x-8">
-              <a href="#home" className="hover:text-blue-600 transition-colors">Home</a>
-              <a href="#about" className="hover:text-blue-600 transition-colors">About</a>
-              <a href="#projects" className="hover:text-blue-600 transition-colors">Projects</a>
-              <a href="#contact" className="hover:text-blue-600 transition-colors">Contact</a>
-            </div>
-          </div>
-          
-          {/* Mobile Menu */}
-          {isMenuOpen && (
-            <div className="md:hidden mt-4 bg-white rounded-lg shadow-lg p-4">
-              <div className="flex flex-col space-y-4">
-                <a href="#home" className="hover:text-blue-600 transition-colors">Home</a>
-                <a href="#about" className="hover:text-blue-600 transition-colors">About</a>
-                <a href="#projects" className="hover:text-blue-600 transition-colors">Projects</a>
-                <a href="#contact" className="hover:text-blue-600 transition-colors">Contact</a>
-              </div>
-            </div>
-          )}
-        </div>
-      </nav>
+   <Navbar/>
 
       {/* Hero Section */}
-      <section id="home" className="pt-20  flex items-center">
+      <HeroSection/>
+      {/* <section id="home" className="pt-20  flex items-center">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="md:w-1/2 text-center md:text-left">
@@ -138,10 +114,11 @@ const Portfolio = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-white">
+      <AboutMe/>
+      {/* <section id="about" className="py-20 bg-white">
 
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12">About Me</h2>
@@ -176,9 +153,9 @@ const Portfolio = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <div className="flex flex-col items-center py-10 bg-white ">
+      {/* <div className="flex flex-col items-center py-10 bg-white ">
       <h2 className="text-2xl md:text-3xl font-bold mb-10 text-black">Experience Timeline</h2>
       <div className="w-full max-w-md lg:max-w-3xl space-y-8 px-4">
         {experienceData.map((item, index) => (
@@ -199,9 +176,10 @@ const Portfolio = () => {
           </div>
         ))}
       </div>
-    </div>    
+    </div>     */}
+    <TimelineComponent/>
 
-      <div className="flex flex-col items-center py-10 bg-white ">
+      {/* <div className="flex flex-col items-center py-10 bg-white ">
       <h2 className="text-2xl md:text-3xl font-bold mb-10 text-black">Education Timeline</h2>
       <div className="w-full max-w-md lg:max-w-3xl space-y-8 px-4">
         {timelineData.map((item, index) => (
@@ -221,12 +199,12 @@ const Portfolio = () => {
           </div>
         ))}
       </div>
-    </div>
+    </div> */}
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 bg-gray-50">
+      <section id="projects" className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">My Projects</h2>
+          <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">My Projects</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
@@ -255,63 +233,12 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Get In Touch</h2>
-          <div className="max-w-3xl mx-auto">
-            <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-8 mb-8">
-              <a href="mailto:kabinitin2002@gmail.com" className="flex items-center justify-center bg-gray-50 px-6 py-4 rounded-lg hover:bg-gray-100 transition-colors">
-                <Mail size={24} className="text-blue-600 mr-2" />
-                <span>kabinitin2002@gmail.com</span>
-              </a>
-              <a href="https://linkedin.com/in/nitin-kabi-980532247" className="flex items-center justify-center bg-gray-50 px-6 py-4 rounded-lg hover:bg-gray-100 transition-colors">
-                <Linkedin size={24} className="text-blue-600 mr-2" />
-                <span>LinkedIn</span>
-              </a>
-            </div>
-            {/* <form className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <input type="text" placeholder="Name" className="w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-blue-600" />
-                <input type="email" placeholder="Email" className="w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-blue-600" />
-              </div>
-              <input type="text" placeholder="Subject" className="w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-blue-600" />
-              <textarea placeholder="Message" rows="6" className="w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-blue-600"></textarea>
-              <button type="submit" className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                Send Message
-              </button>
-            </form> */}
-          </div>
-        </div>
-      </section>
+      <ContactSection/>
       <ResumeDownload/>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-center md:text-left mb-4 md:mb-0">
-              <h3 className="text-xl font-bold">Nitin Kabi</h3>
-              <p className="text-gray-400">Full Stack Developer</p>
-            </div>
-            <div className="flex space-x-6">
-              <a href="https://github.com/nitin00201" className="hover:text-blue-400 transition-colors">
-                <GithubIcon size={24} />
-              </a>
-              <a href="https://linkedin.com/in/nitin-kabi-980532247" className="hover:text-blue-400 transition-colors">
-                <Linkedin size={24} />
-              </a>
-              <a href="mailto:kabinitin2002@gmail.com" className="hover:text-blue-400 transition-colors">
-                <Mail size={24} />
-              </a>
-            </div>
-          </div>
-          <div className="text-center mt-8 text-gray-400">
-            © 2024 Nitin. All rights reserved.
-          </div>
-        </div>
-      </footer>
+      <Footer/>
 
       {/* Scroll to Top Button */}
       {isScrolled && (
