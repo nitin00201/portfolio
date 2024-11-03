@@ -3,7 +3,7 @@ import React from "react";
 const ResumeDownload = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "https://drive.google.com/file/d/1qa3GKhOKT6fvJ1HAHldpwhgQm6hjRcPB/view?usp=sharing"; 
+    link.href = "https://drive.google.com/file/d/12j0ou3HudTbRnSDFjrnxNXHVFccq84B3/view?usp=sharing"; 
     link.download = "nitin_kabi_resume.pdf";
     link.click();
     
