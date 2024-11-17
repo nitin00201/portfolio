@@ -80,6 +80,13 @@ const Portfolio = () => {
       tech: ["React", "Tailwind CSS",],
       github: "https://github.com/nitin00201/portfolio",
       demo: "https://portfolio-sage-one-22.vercel.app/"
+    },
+    {
+      title: "Video conference Website",
+      description: "video calling website built with Nextjs, stream and Tailwind CSS",
+      tech: ["Next js", "Tailwind CSS","stream"],
+      github: "https://github.com/nitin00201/zoom-clone",
+      demo: "https://zoom-clone-sage-two.vercel.app/"
     }
   ];
 
