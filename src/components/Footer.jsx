@@ -20,10 +20,10 @@ const Footer = () => {
             <a href="mailto:kabinitin2002@gmail.com" aria-label="Email" className="hover:text-blue-400 transition-colors">
               <FaEnvelope size={24} />
             </a>
-            <a href="https://twitter.com/yourusername" aria-label="Twitter" className="hover:text-blue-400 transition-colors">
+            <a href="/" aria-label="Twitter" className="hover:text-blue-400 transition-colors">
               <FaTwitter size={24} />
             </a>
-            <a href="https://yourwebsite.com" aria-label="Website" className="hover:text-blue-400 transition-colors">
+            <a href="/" aria-label="Website" className="hover:text-blue-400 transition-colors">
               <FaGlobe size={24} />
             </a>
           </div>

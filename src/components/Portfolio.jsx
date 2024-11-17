@@ -87,6 +87,13 @@ const Portfolio = () => {
       tech: ["Next js", "Tailwind CSS","stream"],
       github: "https://github.com/nitin00201/zoom-clone",
       demo: "https://zoom-clone-sage-two.vercel.app/"
+    },
+    {
+      title: "Collaberative notes Website",
+      description: "collaberative notes website built with Nextjs, liveblocks Tailwind CSS",
+      tech: ["Next js", "Tailwind CSS","liveblocks"],
+      github: "https://github.com/nitin00201/notes",
+      demo: "https://notes-tau-lemon.vercel.app/"
     }
   ];
 
